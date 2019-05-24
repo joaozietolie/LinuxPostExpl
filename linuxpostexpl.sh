@@ -11,12 +11,12 @@ echo -e "  / \ / \ / \ / \ / \   / \ / \ / \ / \   / \ / \ / \ / \ "
 echo -e " ( L | I | N | U | X ) ( P | R | I | V ) ( E | N | U | M )"
 echo -e "  \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ "
 echo -e "\n Software destinado para enumeração do sistema e vetores para escalação de privilégios em ambientes Linux"
-echo -e "\e[00;31m Desenvolvido por: João Zietolie Ciconet - joao@xlabs.com.br \e[00m\n"
+echo -e "\e[00;31m Desenvolvido por: João Zietolie Ciconet(K43P) - joao@xlabs.com.br \e[00m\n"
 echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 
 
 		echo "OPÇÕES:"
-		echo "-p	Palavra chave"
+		echo "-p	Palavra chave"//(em desenvolvimento)
 		echo "-s	Salva o resultado em um arquivo de sua escolha (necessita acompanhar o nome do arquivo)"
 		echo "-l	Exclui o arquivo de logs criado pelo programa"
 		echo "-h	Ajuda"
