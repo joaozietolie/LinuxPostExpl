@@ -16,7 +16,7 @@ echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 
 
 		echo "OPÇÕES:"
-		echo "-p	Palavra chave"//(em desenvolvimento)
+		echo "-p	Palavra chave"
 		echo "-s	Salva o resultado em um arquivo de sua escolha (necessita acompanhar o nome do arquivo)"
 		echo "-l	Exclui o arquivo de logs criado pelo programa"
 		echo "-h	Ajuda"
