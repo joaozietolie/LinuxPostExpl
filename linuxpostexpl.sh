@@ -88,7 +88,7 @@ if [ "$sudoroot" ]; then
 	echo -e "\e[00;31m[+] Contas com privilégio root:\e[00m\n$sudoroot\n"
 fi
 
-#INfo do sudoers
+#Info do sudoers
 sudoers=`grep -v -e '^$' /etc/sudoers 2>/dev/null | grep -v "#" 2>/dev/null`
 if [ "$sudoers" ]; then
 	echo -e "\e[00;31m[+] Sudoers config:\e[00m$sudoers\n"
@@ -140,18 +140,18 @@ fi
 
 }
 
-amb_info()
+env_info()
 {
         echo -e "\n\t\e[00;32m INFORMAÇÕES DO AMBIENTE \e[00m\n"
  
 
-#INfo de variáveis do ambiente
+#Info de variáveis do ambiente
 envinfo=`env 2>/dev/null | grep -v 'LS_COLORS' 2>/dev/null`
 if [ "$envinfo" ]; then
-	echo -e "\e[00;31m[+] INformações de variáveis de ambiente:\e[00m\n$envinfo"\n
+	echo -e "\e[00;31m[+] Informações de variáveis de ambiente:\e[00m\n$envinfo"\n
 fi
 
-#checa se p SELInux esta habilitado(Mecanismo de segurança MAC no kernel)
+#checa se o SELInux esta habilitado(Mecanismo de segurança MAC no kernel)
 sestatus=`sestatus 2>/dev/null`
 if [ "$sestatus" ]; then
 	echo -e "\e[00;31m[+] SELinux esta presente no sistema:\e[00m\n$sestatus\n"
@@ -163,7 +163,7 @@ if [ "$pathinfo" ]; then
 	echo -e "\e[00;31m[+] Variável PATH:\e[00m\n$pathinfo\n" 
 fi
 
-#lists available shells
+#Shells disponiveis
 shellinfo=`cat /etc/shells 2>/dev/null`
 if [ "$shellinfo" ]; then
 	echo -e "\n\e[00;31m[+] Shells Disponíveis:\e[00m\n$shellinfo\n"
@@ -350,7 +350,7 @@ if [ "$emailroot" ]; then
 fi
 }
 
-limpar(){
+clean(){
 if [ -e "$LOG" ]; then
   `rm -f $LOG`
   echo -e "\e[00;33m[+] Arquivo de logs  deletado com sucesso!)\e[00m\n" 
@@ -367,19 +367,17 @@ calleach(){
 	intro
 	sys_info
 	user_info
-	amb_info
+	env_info
 	job_info
 	misc
 	
 }
 
-
-
 while getopts "p:s:lh" parametro; do
  case "${parametro}" in
     p) palavrachave=${OPTARG};;
     s) saida=${OPTARG};;
-    l) limpar; exit;;
+    l) clean; exit;;
     h) intro; exit;;
  esac
 done
