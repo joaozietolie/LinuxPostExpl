@@ -10,8 +10,8 @@ echo -e "\e[00;32m#########################################################\e[00
 echo -e "  / \ / \ / \ / \ / \   / \ / \ / \ / \   / \ / \ / \ / \ "
 echo -e " ( L | I | N | U | X ) ( P | R | I | V ) ( E | N | U | M )"
 echo -e "  \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ "
-echo -e "\n Software destinado para enumeração do sistema e vetores para escalação de privilégios em ambientes Linux"
-echo -e "\e[00;31m Desenvolvido por: João Zietolie Ciconet(K43P) - joao@xlabs.com.br \e[00m\n"
+echo -e "\n Tool to find possible privillege escalation vectors in Linux systems"
+echo -e "\e[00;31m Powered by: João Zietolie Ciconet(K43P) - joao@xlabs.com.br \e[00m\n"
 echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 
 
@@ -22,13 +22,13 @@ echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 		echo "-h	Ajuda"
 
 echo -e "\n Usuário sendo utilizado: \e[00;31m`whoami`"		
-echo -e "\n Logs serão automaticamente criados com nome de linuxpostexpl-data.log após a execução "
+echo -e "\n Logs are saved automatically as linuxpostexpl-data.log after execution "
 
 echo -e "\n\e[00;32m#########################################################\e[00m"
 }
 
 sys_info(){
-	echo -e "\n\t\e[00;32m INFORMAÇÕES DO SISTEMA \e[00m\n"
+	echo -e "\n\t\e[00;32m ENVIROMENT INFORMATION \e[00m\n"
 
 sysname=`uname -a`
 echo -e "\e[00;31m[+] Informações gerais:\e[00m\n$sysname\n"
