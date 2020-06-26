@@ -1,6 +1,6 @@
 # LinuxPostExpl
-  Ferramenta para enumeração de sistemas Linux visando escalação de privilégios em pós invasão.
+  Tool to find possible privillege escalation vectors in Linux systems, based on https://gtfobins.github.io/
   
-  Uso basico: ./linuxpostexpl 
+  Basic Usage: ./linuxpostexpl 
   
-  Logs serão salvos automaticamente.
+  Logs are saved automatically in a file.
