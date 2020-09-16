@@ -10,7 +10,7 @@ echo -e "\e[00;32m#########################################################\e[00
 echo -e "  / \ / \ / \ / \ / \   / \ / \ / \ / \   / \ / \ / \ / \ "
 echo -e " ( L | I | N | U | X ) ( P | R | I | V ) ( E | N | U | M )"
 echo -e "  \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ "
-echo -e "\n Tool to find possible privillege escalation vectors in Linux systems"
+echo -e "\n Ferramenta para encontrar vetores de escalação de privilégios em sistemas baseados em Linux"
 echo -e "\e[00;31m Powered by: João Zietolie Ciconet(K43P) - joao@xlabs.com.br \e[00m\n"
 echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 
@@ -22,13 +22,13 @@ echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 		echo "-h	Ajuda"
 
 echo -e "\n Usuário sendo utilizado: \e[00;31m`whoami`"		
-echo -e "\n Logs are saved automatically as linuxpostexpl-data.log after execution "
+echo -e "\n Logs automaticamente salvos em linuxpostexpl-data.log após execução"
 
 echo -e "\n\e[00;32m#########################################################\e[00m"
 }
 
 sys_info(){
-	echo -e "\n\t\e[00;32m ENVIROMENT INFORMATION \e[00m\n"
+	echo -e "\n\t\e[00;32m INFORMAÇÕES DE AMBIENTE \e[00m\n"
 
 sysname=`uname -a`
 echo -e "\e[00;31m[+] Informações gerais:\e[00m\n$sysname\n"
@@ -210,7 +210,7 @@ software_configs()
 #Versao do sudo
 sudover=`sudo -V 2>/dev/null| grep "Sudo version" 2>/dev/null`
 if [ "$sudover" ]; then
-	echo -e "\e[00;31m[+] versao do sudo: (Cheque se possui alguma vulnerabilidade conhecida))\e[00m\n$sudover\n" 
+	echo -e "\e[00;31m[+] VersÃo do sudo: (Cheque se possui alguma vulnerabilidade conhecida))\e[00m\n$sudover\n" 
 fi
 
 #mysql detalhes - se instalado
@@ -222,7 +222,7 @@ fi
 #TENTA LOGAR NO MYSQL COM LOGIN E SENHA ROOT
 mysqlconnect=`mysqladmin -u root -p root version 2>/dev/null`
 if [ "$mysqlconnect" ]; then
-	echo -e "\e[00;33m[+] Ṕodemos conectar no mysql com login e senha root!\e[00m\n$mysqlconnect\n"
+	echo -e "\e[00;33m[+] Podemos conectar no mysql com login e senha root!\e[00m\n$mysqlconnect\n"
 fi
 
 #mysql detalhes de versão e login sem senha
