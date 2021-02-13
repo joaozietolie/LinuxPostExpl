@@ -88,6 +88,9 @@ if [ "$sudoroot" ]; then
 	echo -e "\e[00;31m[+] Contas com privilégio root:\e[00m\n$sudoroot\n"
 fi
 
+echo -e "\e[00;31m[-] Visualizar se arquivos sensíveis podem ser lidos/escritos:\e[00m" ; ls -la /etc/passwd 2>/dev/null ; ls -la /etc/group 2>/dev/null ; ls -la /etc/profile 2>/dev/null; ls -la /etc/shadow 2>/dev/null ; ls -la /etc/master.passwd 2>/dev/null 
+echo -e "\n" 
+
 #Info do sudoers
 sudoers=`grep -v -e '^$' /etc/sudoers 2>/dev/null | grep -v "#" 2>/dev/null`
 if [ "$sudoers" ]; then
