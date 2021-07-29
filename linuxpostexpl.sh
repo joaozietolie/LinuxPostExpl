@@ -11,7 +11,7 @@ echo -e "  / \ / \ / \ / \ / \   / \ / \ / \ / \   / \ / \ / \ / \ "
 echo -e " ( L | I | N | U | X ) ( P | R | I | V ) ( E | N | U | M )"
 echo -e "  \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ "
 echo -e "\n Ferramenta para encontrar vetores de escalação de privilégios em sistemas baseados em Linux"
-echo -e "\e[00;31m Powered by: João Zietolie Ciconet(K43P) - joao@xlabs.com.br \e[00m\n"
+echo -e "\e[00;31m Powered by: João Zietolie Ciconet(K43P)  \e[00m\n"
 echo -e " Exemplo de uso: ./linuxpostexpl.sh -o output\n\n"
 
 
